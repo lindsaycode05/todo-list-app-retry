@@ -15,7 +15,46 @@
 </head>
 
 <body>
+  <main>
+    <section class="background-image"></section>
 
+    <section class="todo flex-col">
+      <div class="todo__title">
+        <h1>TODO</h1>
+        <button>
+          <img src="./assets/images/icon-moon.svg" alt="change theme">
+        </button>
+      </div>
+      <div class="todo__input">
+        <input type="text">
+      </div>
+
+      <div class="todo__list">
+        <div class="todo__list-tasks flex">
+          <div class="todo__list-tasks-task flex">
+            <button></button>
+            <p></p>
+          </div>
+          <button>
+          <img src="./assets/images/icon-delete.svg" alt="delete task">
+          </button>
+        </div>
+
+        <div class="todo__list-options grid">
+          <div class="todo__list-options-count"></div>
+          <div class="todo__list-options-filter">
+            <button>All</button>
+            <button>Active</button>
+            <button>Completed</button>
+          </div>
+          <div class="todo__list-options-clear">
+            <button>Clear Completed</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
 </body>
 
 </html>
