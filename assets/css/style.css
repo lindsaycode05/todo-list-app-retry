@@ -38,9 +38,22 @@ button {
 
 input {
   border: none;
+}
+input:focus {
+  outline: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35);
+}
 
-  &:focus {
-    outline: none;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35);
-  }
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
 }
