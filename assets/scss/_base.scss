@@ -37,24 +37,137 @@
   }
 
   &__list {
-    background-color: v.$vr-lt-gy;
+    border-radius: 1rem;
 
     &-tasks {
-      padding: 1rem;
+      padding: 1.5rem;
       border-bottom: 1px solid v.$vr-lt-gyish-bl;
       justify-content: space-between;
+      background-color: v.$vr-lt-gy;
 
-      &-task{
-          button{
-              border: 1px solid v.$lt-gyish-bl;
-              padding: .85rem;
-              border-radius: 50%;
-          }
+      &-task {
+        gap: 1rem;
+        button {
+          border: 1px solid v.$lt-gyish-bl;
+          padding: 0.85rem;
+          border-radius: 50%;
+        }
+        p {
+          font-size: 1.25rem;
+          text-transform: capitalize;
+        }
+      }
+      button img {
+        width: 1.45rem;
       }
     }
 
     &-options {
-      margin-top: 3rem;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        'data data data'
+        'filter filter filter';
+      align-items: center;
+      gap: 2rem;
+      justify-content: space-between;
+
+      &-filter {
+        grid-area: filter;
+        justify-content: center;
+        background-color: v.$vr-lt-gy;
+        box-shadow: 0px -3px 25px -1px rgb(0 0 0 / 25%);
+        border-radius: .75rem;
+        gap: 1.25rem;
+        padding: 1.15rem;
+        button {
+          font-family: 'Josefin Sans', sans-serif;
+          color: v.$dk-gyish-bl;
+          font-size: 1.3rem;
+        }
+      }
+      &-data {
+        grid-area: data;
+        justify-content: space-between;
+        background-color: v.$vr-lt-gy;
+        box-shadow: 2px 8px 12px rgb(0 0 0 / 10%);
+        padding: 1.7rem;
+        border-radius: 0 0 1rem 1rem;
+        p {
+          color: v.$dk-gyish-bl;
+          font-size: 1.15rem;
+        }
+        button {
+          color: v.$dk-gyish-bl;
+          font-family: 'Josefin Sans', sans-serif;
+          font-size: 1.15rem;
+        }
+      }
     }
   }
 }
+
+.todo__list > div:first-child {
+  border-radius: 1rem 1rem 0 0;
+}
+
+// .todo__list-info {
+//     grid-template-rows: repeat(2, 1fr);
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-areas:
+//       "data data data"
+//       "state state state";
+//     align-items: center;
+//     gap: 2rem;
+//     margin-bottom: 3rem;
+//     display: none;
+//     border-radius: 0.5rem;
+
+//     .data {
+//       grid-area: data;
+//       justify-content: space-between;
+//       padding: 2.25rem;
+//       background-color: v.$vr-lt-gy;
+
+//       box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.1);
+//       border-radius: 0rem 0rem 0.5rem 0.5rem;
+
+//       p {
+//         font-size: 1.15rem;
+//         color: v.$dk-gyish-bl;
+//       }
+
+//       button {
+//         color: v.$dk-gyish-bl;
+//         font-family: "Josefin Sans", sans-serif;
+//         font-size: 1.25rem;
+//         transition: 0.2s;
+
+//         &:hover {
+//           color: v.$lt-gyish-bl;
+//         }
+//       }
+//     }
+
+//     .buttons {
+//       grid-area: state;
+//       justify-content: center;
+//       gap: 2rem;
+//       background-color: v.$vr-lt-gy;
+//       padding-block: 1.5rem;
+//       box-shadow: 0px -3px 25px -1px rgba(0, 0, 0, 0.25);
+//       border-radius: 0.5rem;
+
+//       button {
+//         color: v.$dk-gyish-bl;
+//         font-family: "Josefin Sans", sans-serif;
+//         font-size: 1.3rem;
+//         font-weight: 700;
+//         transition: 0.2s;
+
+//         &:hover {
+//           color: v.$lt-gyish-bl;
+//         }
+//       }
+//     }
+//   }

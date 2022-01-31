@@ -93,18 +93,69 @@ input:focus {
   border-radius: 1rem;
 }
 .todo__list {
-  background-color: #fafafa;
+  border-radius: 1rem;
 }
 .todo__list-tasks {
-  padding: 1rem;
+  padding: 1.5rem;
   border-bottom: 1px solid #e4e5f1;
   justify-content: space-between;
+  background-color: #fafafa;
+}
+.todo__list-tasks-task {
+  gap: 1rem;
 }
 .todo__list-tasks-task button {
   border: 1px solid #d2d3db;
   padding: 0.85rem;
   border-radius: 50%;
 }
+.todo__list-tasks-task p {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+.todo__list-tasks button img {
+  width: 1.45rem;
+}
 .todo__list-options {
-  margin-top: 3rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "data data data" "filter filter filter";
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.todo__list-options-filter {
+  grid-area: filter;
+  justify-content: center;
+  background-color: #fafafa;
+  box-shadow: 0px -3px 25px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 0.75rem;
+  gap: 1.25rem;
+  padding: 1.15rem;
+}
+.todo__list-options-filter button {
+  font-family: "Josefin Sans", sans-serif;
+  color: #9394a5;
+  font-size: 1.3rem;
+}
+.todo__list-options-data {
+  grid-area: data;
+  justify-content: space-between;
+  background-color: #fafafa;
+  box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.7rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.todo__list-options-data p {
+  color: #9394a5;
+  font-size: 1.15rem;
+}
+.todo__list-options-data button {
+  color: #9394a5;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.15rem;
+}
+
+.todo__list > div:first-child {
+  border-radius: 1rem 1rem 0 0;
 }
