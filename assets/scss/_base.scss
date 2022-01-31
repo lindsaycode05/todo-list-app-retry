@@ -1,0 +1,60 @@
+@use 'variables' as v;
+
+.background-image {
+  background-image: url(/assets/images/bg-mobile-light.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 20rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.todo {
+  width: 87%;
+  margin-inline: auto;
+  gap: 3rem;
+
+  &__title {
+    margin-top: 4rem;
+    justify-content: space-between;
+    h1 {
+      color: v.$vr-lt-gy;
+      font-size: 2rem;
+      letter-spacing: 0.85rem;
+    }
+    img {
+      width: 2rem;
+    }
+  }
+
+  &__input input {
+    width: 100%;
+    padding: 1.5rem 5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 1rem;
+  }
+
+  &__list {
+    background-color: v.$vr-lt-gy;
+
+    &-tasks {
+      padding: 1rem;
+      border-bottom: 1px solid v.$vr-lt-gyish-bl;
+      justify-content: space-between;
+
+      &-task{
+          button{
+              border: 1px solid v.$lt-gyish-bl;
+              padding: .85rem;
+              border-radius: 50%;
+          }
+      }
+    }
+
+    &-options {
+      margin-top: 3rem;
+    }
+  }
+}
