@@ -33,4 +33,16 @@ function renderTask() {
     task: taskValue,
     done: false,
   });
+
+  completeTask();
+}
+
+function completeTask() {
+  const checkButton = document.querySelector('.todo__list-tasks-task button');
+  const task = document.querySelector('.todo__list-tasks-task p');
+
+  checkButton.addEventListener('click', () => {
+    checkButton.classList.toggle('completed-task');
+    task.classList.toggle('line-through')
+  });
 }
